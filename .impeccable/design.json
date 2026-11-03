@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T00:00:00Z",
+  "title": "Design System: McNabb Construction LLC",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#fbfaf8", "tonalRamp": ["#241f22", "#3a3337", "#574d52", "#736a6f", "#a59da1", "#d6d0cc", "#f2efeb", "#fbfaf8"] },
+      "stone": { "role": "neutral", "displayName": "Stone", "canonical": "#f2efeb", "tonalRamp": ["#2a2522", "#433c37", "#5f5650", "#7d746d", "#a39a93", "#c9c1ba", "#e4ded8", "#f2efeb"] },
+      "ink": { "role": "neutral", "displayName": "Aubergine Ink", "canonical": "#241f22", "tonalRamp": ["#181416", "#241f22", "#3a3337", "#574d52", "#736a6f", "#a59da1", "#d6d0cc", "#f4f1f2"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#574d52" },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3", "canonical": "#736a6f" },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgb(36 31 34 / 0.1)" },
+      "night": { "role": "neutral", "displayName": "Night", "canonical": "#241f22" },
+      "brand": { "role": "primary", "displayName": "Logo Green", "canonical": "#b0cb6a", "tonalRamp": ["#26300f", "#3a4818", "#4f6120", "#6c8530", "#8ea84a", "#b0cb6a", "#cfe09e", "#eef4dc"] },
+      "brand-hover": { "role": "primary", "displayName": "Logo Green, Lifted", "canonical": "#bfd77f" },
+      "brand-deep": { "role": "primary", "displayName": "Moss Ink", "canonical": "#4f6120" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Home hero H1 only; 2.25rem / 3rem / 3.75rem at base / sm / lg." },
+      "headline": { "displayName": "Headline", "purpose": "Section and page titles." },
+      "title": { "displayName": "Title", "purpose": "Sub-heads in prose, form headings, photo-tile names." },
+      "quote": { "displayName": "Quote", "purpose": "Featured client testimonial." },
+      "body": { "displayName": "Body", "purpose": "Prose in Ink 2, capped near 38 to 40rem." },
+      "label": { "displayName": "Label", "purpose": "Form labels and legal line, sentence case." }
+    },
+    "shadows": [
+      { "name": "floating-action", "value": "0 8px 24px -8px rgb(36 31 34 / 0.45)", "purpose": "Fixed mobile call button only." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "All state transitions (160ms color, 120ms press)." },
+      { "name": "hero-word-rise", "value": "words from y 28px, opacity 0; 0.9s power3.out, 45ms stagger", "purpose": "Home hero H1 only; the one authored entrance." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Call and send actions; green fill, ink text.",
+      "html": "<button class=\"ds-btn ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"/></svg>Call for a free estimate</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 3rem; padding: 0 1.25rem; border-radius: 0.5rem; border: 1px solid transparent; font: 500 1rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 160ms cubic-bezier(0.22,1,0.36,1), border-color 160ms cubic-bezier(0.22,1,0.36,1), transform 120ms cubic-bezier(0.22,1,0.36,1); } .ds-btn:active { transform: scale(0.98); } .ds-btn:focus-visible { outline: 2px solid #4f6120; outline-offset: 3px; } .ds-btn-primary { background: #b0cb6a; color: #241f22; } .ds-btn-primary:hover { background: #bfd77f; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on light grounds; hairline stroke.",
+      "html": "<button class=\"ds-btn-ghost\">See our work</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; height: 3rem; padding: 0 1.25rem; border-radius: 0.5rem; border: 1px solid rgb(36 31 34 / 0.1); background: transparent; color: #241f22; font: 500 1rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: border-color 160ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-ghost:hover { border-color: rgb(36 31 34 / 0.3); } .ds-btn-ghost:focus-visible { outline: 2px solid #4f6120; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button on Dark",
+      "kind": "button",
+      "refersTo": "button-ghost-dark",
+      "description": "Secondary action over the hero photo or night band.",
+      "html": "<div class=\"ds-night\"><button class=\"ds-btn-ghost-dark\">See our work</button></div>",
+      "css": ".ds-night { background: #241f22; padding: 24px; } .ds-btn-ghost-dark { display: inline-flex; align-items: center; height: 3rem; padding: 0 1.25rem; border-radius: 0.5rem; border: 1px solid rgb(255 255 255 / 0.35); background: transparent; color: #fff; font: 500 1rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 160ms cubic-bezier(0.22,1,0.36,1), border-color 160ms cubic-bezier(0.22,1,0.36,1); } .ds-btn-ghost-dark:hover { border-color: #fff; background: rgb(255 255 255 / 0.08); } .ds-btn-ghost-dark:focus-visible { outline: 2px solid #b0cb6a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Contact and review form field with label above.",
+      "html": "<label class=\"ds-label\" for=\"ds-name\">Name</label><input id=\"ds-name\" class=\"ds-field\" placeholder=\"Jane Doe\">",
+      "css": ".ds-label { display: block; margin-bottom: 0.375rem; font: 500 0.875rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; color: #574d52; } .ds-field { width: 100%; border-radius: 0.5rem; border: 1px solid rgb(36 31 34 / 0.18); background: #fff; padding: 0.75rem 0.875rem; color: #241f22; font: 400 1.0625rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; transition: border-color 160ms cubic-bezier(0.22,1,0.36,1); } .ds-field::placeholder { color: #736a6f; } .ds-field:hover { border-color: rgb(36 31 34 / 0.35); } .ds-field:focus { outline: 2px solid #4f6120; outline-offset: 0; border-color: transparent; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Sticky paper header with hairline, Ink 2 links, green phone button.",
+      "html": "<header class=\"ds-header\"><strong class=\"ds-logo\">McNabb</strong><nav><a class=\"ds-nav-link ds-active\" href=\"#\">Kitchen remodel</a><a class=\"ds-nav-link\" href=\"#\">Photo gallery</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav><a class=\"ds-phone\" href=\"#\">512-567-5904</a></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 80px; padding: 0 32px; background: rgb(251 250 248 / 0.95); backdrop-filter: blur(4px); border-bottom: 1px solid rgb(36 31 34 / 0.1); font-family: 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; } .ds-logo { font-stretch: 112%; color: #241f22; } .ds-nav-link { padding: 8px 12px; border-radius: 6px; font-size: 0.9375rem; color: #574d52; text-decoration: none; transition: color 160ms; } .ds-nav-link:hover, .ds-active { color: #241f22; } .ds-active { font-weight: 500; } .ds-nav-link:focus-visible { outline: 2px solid #4f6120; outline-offset: 3px; } .ds-phone { display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1.25rem; border-radius: 0.5rem; background: #b0cb6a; color: #241f22; font-weight: 500; text-decoration: none; font-variant-numeric: tabular-nums; } .ds-phone:hover { background: #bfd77f; }"
+    },
+    {
+      "name": "Photo Tile",
+      "kind": "card",
+      "refersTo": "photo-tile",
+      "description": "Service link: 4:5 project photo, 12px frame, bottom scrim, wide title and arrow.",
+      "html": "<a class=\"ds-tile\" href=\"#\"><img src=\"/images/banner1.jpg\" alt=\"\"><span class=\"ds-tile-cap\">Kitchen remodel<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></span></a>",
+      "css": ".ds-tile { position: relative; display: block; width: 260px; overflow: hidden; border-radius: 12px; background: #241f22; } .ds-tile img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; } .ds-tile-cap { position: absolute; inset: auto 0 0 0; display: flex; align-items: center; justify-content: space-between; padding: 80px 24px 24px; background: linear-gradient(0deg, rgb(24 20 22 / 0.82), rgb(24 20 22 / 0)); color: #fff; font: 600 1.25rem 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; font-stretch: 112%; } .ds-tile svg { transition: transform 300ms; } .ds-tile:hover svg { transform: translateX(4px); } .ds-tile:focus-visible { outline: 2px solid #4f6120; outline-offset: 3px; }"
+    },
+    {
+      "name": "Page Header",
+      "kind": "custom",
+      "refersTo": "page-header",
+      "description": "Stone band opening every inner page.",
+      "html": "<section class=\"ds-page-header\"><h1>Kitchen remodeling</h1><p>Cabinets, countertops and layouts for South Austin homes</p></section>",
+      "css": ".ds-page-header { background: #f2efeb; border-bottom: 1px solid rgb(36 31 34 / 0.1); padding: 56px 32px; font-family: 'Archivo Variable', ui-sans-serif, system-ui, sans-serif; } .ds-page-header h1 { margin: 0; font-size: 2.25rem; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; font-stretch: 112%; color: #241f22; } .ds-page-header p { margin: 16px 0 0; font-size: 1.125rem; color: #574d52; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Finished Room",
+    "overview": "A clean, straight-played remodeler site where the real project photographs and the phone number do the persuading. Surfaces are warm off-white paper and stone bands, ink is an aubergine-charcoal lifted from the logo, and the logo's green is the one accent. The interface stays quiet so a finished local kitchen can carry the page.\n\nDensity is relaxed: generous section padding, one idea per band, alternating paper, stone and night bands to pace the story. Headings run wide (Archivo at 112% width) to echo the logo's broad caps; everything else is plain, legible Archivo. Depth comes from tonal bands, hairline rules and photography, not from shadows. The world deliberately refuses dark-navy-and-orange contractor chrome, badge rows and stock imagery.",
+    "keyCharacteristics": [
+      "Warm paper, stone and night bands alternate to pace the page.",
+      "Logo green is the only accent and always carries ink text.",
+      "Wide-set Archivo headings; normal-width Archivo body.",
+      "8px controls, 12px photos, 1px hairlines at 10% ink.",
+      "Real project photography, full bleed or in 12px frames, carries the persuasion."
+    ],
+    "rules": [
+      { "name": "The Ink-On-Green Rule", "body": "Every green fill carries ink text. Green text on light grounds uses Moss Ink, never the fill green.", "section": "colors" },
+      { "name": "The One Accent Rule", "body": "Logo green is the only hue in the interface. Any other color on screen comes from photography.", "section": "colors" },
+      { "name": "The Wide Heading Rule", "body": "h1 to h3 and heading-like tile names render at 112% width and balanced wrap; body copy never stretches.", "section": "typography" },
+      { "name": "The Sentence Case Rule", "body": "Labels, buttons and nav are sentence case at normal tracking. There are no uppercase eyebrows.", "section": "typography" },
+      { "name": "The Band-Not-Shadow Rule", "body": "Separate content with a change of ground or a hairline, never a card shadow.", "section": "elevation" },
+      { "name": "The Scrim Rule", "body": "Text over photography sits on a night-tinted gradient (rgb 24 20 22 at 82 to 86% fading to near-clear), left-to-right in the hero and bottom-up on tiles.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put ink text on every Logo Green fill, and use Moss Ink for green text on light grounds.",
+      "Do pace pages with paper, stone and night bands and 1px hairlines.",
+      "Do frame photos at 12px and controls at 8px.",
+      "Do set h1 to h3 at 112% width with -0.02em tracking on the largest sizes.",
+      "Do lead with real project photography under a night scrim when text overlays it."
+    ],
+    "donts": [
+      "Don't introduce a second accent hue, or dark-navy-and-orange contractor chrome.",
+      "Don't put white text on Logo Green.",
+      "Don't add badge rows, stock imagery or uppercase eyebrows above headings.",
+      "Don't separate content with card shadows; the only shadow belongs to the floating mobile call button."
+    ]
+  }
+}
